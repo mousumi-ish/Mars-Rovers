@@ -1,7 +1,7 @@
 import { Direction } from "./roverDirection";
 
-export type Rover = {
+export interface Rover {
   x: number;
   y: number;
   facingTowards: Direction;
-};
+}

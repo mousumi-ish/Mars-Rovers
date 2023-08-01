@@ -1,3 +1,4 @@
+import { Rover } from "./rover";
 export enum Direction {
   North = "N",
   East = "E",
@@ -12,7 +13,7 @@ export const rightMovement = (direction: Direction) => {
     [Direction.West, Direction.North],
   ]);
 
-  return rightmove.get(direction);
+  return rightmove.get(direction) as Direction;
 };
 export const leftMovement = (direction: Direction) => {
   const leftmove = new Map<Direction, Direction>([
