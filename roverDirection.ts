@@ -5,6 +5,9 @@ export enum Direction {
   South = "S",
   West = "W",
 }
+//Defining the direction the rover will follow if it turns left or right
+// depending on the direction it's facing.
+
 export const rightMovement = (direction: Direction) => {
   const rightmove = new Map<Direction, Direction>([
     [Direction.North, Direction.East],

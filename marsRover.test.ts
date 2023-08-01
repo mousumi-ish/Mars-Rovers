@@ -1,4 +1,5 @@
 import { Direction } from "./roverDirection";
+import { movement } from "./plateau";
 //import { Rover } from "./rover";
 
 describe("Execute", () => {
@@ -12,10 +13,7 @@ describe("Execute", () => {
     ${"RR"}   | ${"0:0:S"}
     ${"RRR"}  | ${"0:0:W"}
     ${"RRRR"} | ${"0:0:N"}
-  `(
-    "For given '$command' output will be $newPosition",
-    ({ expectedOutput }) => {
-      expect("RR").toBe(expectedOutput);
-    }
-  );
+  `("For given '$command' output will be $newPosition", ({ movement }) => {
+    expect("RRRR").toBe(expectedOutput);
+  });
 });
