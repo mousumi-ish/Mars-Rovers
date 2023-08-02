@@ -33,3 +33,18 @@ test("Move rover on the plateau for given co-ordinates and direction", () => {
     new newPosition(new Position(1, 3), Direction.N)
   );
 });
+
+test("Move rover on the plateau for given co-ordinates and direction", () => {
+  let plateau = new Plateau(5, 5);
+
+  let rover = new Rover(
+    new newPosition(new Position(0, 0), Direction.N),
+    plateau
+  );
+
+  let command = new Command(rover);
+
+  expect(command.execute("RM")).toEqual(
+    new newPosition(new Position(1, 0), Direction.E)
+  );
+});
