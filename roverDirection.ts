@@ -26,5 +26,5 @@ export const leftMovement = (direction: Direction) => {
     [Direction.East, Direction.North],
   ]);
 
-  return leftmove.get(direction);
+  return leftmove.get(direction) as Direction;
 };
