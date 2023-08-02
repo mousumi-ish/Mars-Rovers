@@ -1,8 +1,9 @@
-export interface Plateau {
+export interface Grid {
+  //Defining the coordinates of rover on the plateau
   m: number;
   n: number;
 }
-export class Plateau implements Plateau {
+export class Plateau implements Grid {
   m: number;
   n: number;
   constructor(m: number, n: number) {
