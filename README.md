@@ -56,6 +56,17 @@ MMRMMRMRRM
 Expected Output:
 1 3 N
 5 1 E
+
+Algorithm to solve MarsRovers project:
+
+Define the Plateau into matrix ex: 5X5 .
+Read the input of Rover position and direction ex:1,2 N .
+Read the input for Rover navigation ex: LMLMLMLMM .
+In a loop, read each character of rover navigation and find out the next position and direction by mapping the character to switch cases.
+for example: Rover position : 1,2,N 4.
+Direction of the movement : LMLMLMLMM a. L -> 1,2 W b. M -> 0,2 W c. L  
+ -> 0,2 S d. M -> 0,1 S e. L -> 0,1 E f. M -> 1,1 E g. L -> 1,1 N h. M -> 1,2 N i. M -> 1,3 N
+
 Getting Started with Roman Numerals Kata:
 first clone the repository with the link, https://github.com/mousumi-ish/Mars-Rovers.git.
 

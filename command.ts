@@ -22,6 +22,6 @@ export class Command {
           break;
       }
     });
-    return this.rover.state;
+    return this.rover.state;  
   }
 }
