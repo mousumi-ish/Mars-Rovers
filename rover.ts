@@ -1,4 +1,3 @@
-import { Direction } from "./direction";
 import { Plateau } from "./plateau";
 import { newPosition } from "./state";
 
@@ -21,16 +20,16 @@ export class Rover {
       throw new Error("Obstacles , can't move");
     }
     switch (this.state.direction) {
-      case Direction.N:
+      case "N":
         this.state.coordinate.y++;
         break;
-      case Direction.W:
+      case "W":
         this.state.coordinate.x--;
         break;
-      case Direction.E:
+      case "E":
         this.state.coordinate.x++;
         break;
-      case Direction.S:
+      case "S":
         this.state.coordinate.y--;
         break;
     }
@@ -41,17 +40,17 @@ export class Rover {
       case "L":
         {
           switch (this.state.direction) {
-            case Direction.E:
-              this.state.direction = Direction.N;
+            case "E":
+              this.state.direction = "N";
               break;
-            case Direction.W:
-              this.state.direction = Direction.S;
+            case "W":
+              this.state.direction = "S";
               break;
-            case Direction.N:
-              this.state.direction = Direction.W;
+            case "N":
+              this.state.direction = "W";
               break;
-            case Direction.S:
-              this.state.direction = Direction.E;
+            case "S":
+              this.state.direction = "E";
               break;
           }
         }
@@ -59,17 +58,17 @@ export class Rover {
       case "R":
         {
           switch (this.state.direction) {
-            case Direction.E:
-              this.state.direction = Direction.S;
+            case "E":
+              this.state.direction = "S";
               break;
-            case Direction.W:
-              this.state.direction = Direction.N;
+            case "W":
+              this.state.direction = "N";
               break;
-            case Direction.N:
-              this.state.direction = Direction.E;
+            case "N":
+              this.state.direction = "E";
               break;
-            case Direction.S:
-              this.state.direction = Direction.W;
+            case "S":
+              this.state.direction = "W";
               break;
           }
         }
