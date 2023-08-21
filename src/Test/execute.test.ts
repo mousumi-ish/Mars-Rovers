@@ -35,3 +35,25 @@ describe("Execute", () => {
     expect(output).toBe("5:0:E");
   });
 });
+describe("should return correct position for rover if not on plateau", () => {
+  const initialRover = {
+    x: 1,
+    y: 7,
+    facingTowards: Direction.North,
+  };
+  test("should return $1:5:N if input is '$MM'", () => {
+    const output = execute("MM", initialRover);
+    expect(output).toBe("1:5:N");
+  });
+});
+describe("Execute", () => {
+  const initialRover = {
+    x: 7,
+    y: 1,
+    facingTowards: Direction.East,
+  };
+  test("should return $5:1:E if input is '$MM'", () => {
+    const output = execute("MM", initialRover);
+    expect(output).toBe("5:1:E");
+  });
+});
